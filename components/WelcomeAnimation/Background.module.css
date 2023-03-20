@@ -1,0 +1,21 @@
+.top {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: end;
+  z-index: 1;
+  width: 300px;
+  height: 100px;
+  background-color: var(--red);
+}
+
+.bottom {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: center;
+  align-self: start;
+  z-index: 1;
+  width: 300px;
+  height: 100px;
+  background-color: var(--blue);
+}
