@@ -1,3 +1,4 @@
+import React from 'react';
 import { animated, useTransition, useSpring } from '@react-spring/web';
 import styles from './Background.module.css';
 
@@ -12,17 +13,17 @@ export default function BottomBackground({
     from: {
       opacity: 0,
       width: '0%',
-      height: '5%'
+      height: '5%',
     },
     enter: {
       opacity: 1,
       width: '300%',
-      height: '5%'
+      height: '5%',
     },
     leave: {
       opacity: 0,
       width: '0%',
-      height: '5%'
+      height: '5%',
     },
   });
 
