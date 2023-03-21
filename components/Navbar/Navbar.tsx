@@ -1,4 +1,4 @@
-import WelcomeAnimation from '../WelcomeAnimation/WelcomeAnimation';
+import WelcomeAnimation from '../Home/WelcomeAnimation/WelcomeAnimation';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
