@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useSpringRef, useChain } from '@react-spring/web';
+import { useSpringRef, useChain, useSpring, animated } from '@react-spring/web';
 import TopBackground from './TopBackground';
 import BottomBackground from './BottomBackground';
 import Logo from './Logo/Logo';
@@ -51,6 +51,8 @@ export default function WelcomeAnimation() {
   const iAffRef = useSpringRef();
   const rAffRef = useSpringRef();
   const sAffRef = useSpringRef();
+  // logo shrink refs
+  const shrinkLogoRef = useSpringRef();
 
   // determines animation order and delay between each
   useChain([
@@ -95,6 +97,8 @@ export default function WelcomeAnimation() {
     iAffRef,
     rAffRef,
     sAffRef,
+    // logo shrink
+    shrinkLogoRef,
   ], [
     // **background**
     0.2, // topBgRefOne width
@@ -137,10 +141,27 @@ export default function WelcomeAnimation() {
     0.85, // I in AFFAIRS
     0.86, // R in AFFAIRS
     0.87, // S in AFFAIRS
-  ], 3500);
+    // shrink logo size
+    1,
+  ], 3000);
+
+  const logoShrinkSpring = useSpring({
+    ref: shrinkLogoRef,
+    from: {
+      width: '100vw',
+      height: '100vh',
+    },
+    to: {
+      width: '15vw',
+      height: '15vh',
+    },
+  });
 
   return (
-    <div className={welcomeStyles.wrapper}>
+    <animated.div
+      className={welcomeStyles.wrapper}
+      style={logoShrinkSpring}
+    >
       <TopBackground
         refOne={topBgRefOne}
         refTwo={topBgRefTwo}
@@ -194,6 +215,6 @@ export default function WelcomeAnimation() {
         rAffRef={rAffRef}
         sAffRef={sAffRef}
       />
-    </div>
+    </animated.div>
   );
 }
