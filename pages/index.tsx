@@ -1,9 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
+import useWindowDimensions from '@/hooks/useWindowDimensions';
 import WelcomeReel from '@/components/Home/Video/WelcomeReel';
 import styles from '@/styles/Home.module.css';
 
 export default function Home() {
+  const { height, width } = useWindowDimensions();
+
   return (
     <>
       <Head>
@@ -16,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <WelcomeReel />
+        <WelcomeReel width={width} height={height} />
       </main>
     </>
   );
