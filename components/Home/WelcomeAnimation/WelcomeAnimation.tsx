@@ -148,7 +148,7 @@ export default function WelcomeAnimation() {
     0.87, // S in AFFAIRS
     // shrink logo size
     1,
-  ], 3000);
+  ], 2000);
 
   const logoShrinkSpring = useSpring({
     ref: shrinkLogoRef,
