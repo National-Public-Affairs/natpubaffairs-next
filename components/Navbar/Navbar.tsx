@@ -1,3 +1,4 @@
+import React from 'react';
 import WelcomeAnimation from '../Home/WelcomeAnimation/WelcomeAnimation';
 import styles from './Navbar.module.css';
 

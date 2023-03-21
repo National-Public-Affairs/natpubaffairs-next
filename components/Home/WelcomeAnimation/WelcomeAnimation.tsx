@@ -1,5 +1,10 @@
-import { useState } from 'react';
-import { useSpringRef, useChain, useSpring, animated } from '@react-spring/web';
+import React, { useState } from 'react';
+import {
+  useSpringRef,
+  useChain,
+  useSpring,
+  animated,
+} from '@react-spring/web';
 import TopBackground from './TopBackground';
 import BottomBackground from './BottomBackground';
 import Logo from './Logo/Logo';

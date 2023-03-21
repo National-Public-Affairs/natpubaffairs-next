@@ -1,17 +1,6 @@
+import React from 'react';
 import Head from 'next/head';
-import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
-
-const inter = Inter({ subsets: ['latin'] });
-
-{/* <Image
-  src="/vercel.svg"
-  alt="Vercel Logo"
-  className={styles.vercelLogo}
-  width={100}
-  height={24}
-  priority
-/> */}
 
 export default function Home() {
   return (
@@ -29,5 +18,5 @@ export default function Home() {
         
       </main>
     </>
-  )
+  );
 }
