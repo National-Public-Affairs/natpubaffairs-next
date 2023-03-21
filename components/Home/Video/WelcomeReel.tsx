@@ -10,7 +10,7 @@ export default function WelcomeReel({ width, height }: WindowDimensions) {
       frameBorder="0"
       allow="autoplay; fullscreen; picture-in-picture"
       allowFullScreen={undefined}
-      title="[NPA] Website Reel v12.mp4"
+      title="NPA: Your campaign doesn't stop. Neither do we."
       data-ready="true"
       className="elementor-background-video-embed"
       style={{ width, height }}
