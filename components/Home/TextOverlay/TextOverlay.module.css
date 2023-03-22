@@ -1,0 +1,28 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9);
+  mix-blend-mode: luminosity;
+  display: grid;
+  grid-template: 100% / 100%;
+  text-align: left;
+  font-size: 10vw;
+  font-weight: 900;
+  line-height: 10vw;
+}
+
+.motto {
+  justify-self: end;
+  align-self: center;
+  width: 75%;
+  padding-right: 20%;
+  font-size: 13vw;
+  font-weight: 900;
+  line-height: 8vw;
+  mix-blend-mode: normal;
+  color: var(--blue);
+}

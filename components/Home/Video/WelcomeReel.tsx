@@ -13,7 +13,7 @@ export default function WelcomeReel({ width, height }: WindowDimensions) {
       title="NPA: Your campaign doesn't stop. Neither do we."
       data-ready="true"
       className="elementor-background-video-embed"
-      style={{ width, height }}
+      style={{ width, height, zIndex: '9' }}
     />
   );
 }
