@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import type { SpringRef } from '@react-spring/web';
 import { animated, config, useSpring } from '@react-spring/web';
 
@@ -13,7 +13,7 @@ export default function Letter({
   strokeRef,
   data,
   strokeColor,
-  fillColor
+  fillColor,
 }: Props) {
   const [length, setLength] = useState<number>(0);
 
