@@ -1,21 +1,29 @@
 import React, { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { animated, useTrail } from '@react-spring/web';
+import { motto } from './textData';
 import styles from './TextOverlay.module.css';
 
-export default function TextOverlay() {
+type Props = {
+  animationTrigger: boolean;
+}
+
+export default function TextOverlay({ animationTrigger }: Props) {
   const blendModes = [
-    'normal',
-    'multiply',
-    'screen',
-    'overlay',
-    'darken',
     'hard-light',
-    'soft-light',
-    'hue',
-    'color',
-    'luminosity',
+    'multiply',
+    'normal',
+    'screen',
+    'darken',
   ];
 
-  const [blendMode, setBlendMode] = useState<number>(4);
+  // this will trigger the animation in-sync with the blend mode interval
+  const springs = useTrail(7, {
+    opacity: animationTrigger ? 1 : 0,
+  });
+
+  // this cycles through the blend modes at every each set interval
+  const [blendMode, setBlendMode] = useState<number>(0);
   useEffect(() => {
     function incrementBlendMode() {
       if (blendMode === (blendModes.length - 1)) {
@@ -25,7 +33,7 @@ export default function TextOverlay() {
       }
     }
 
-    const interval = setInterval(incrementBlendMode, 4000);
+    const interval = setInterval(incrementBlendMode, 5000);
 
     return () => clearInterval(interval);
   });
@@ -33,14 +41,21 @@ export default function TextOverlay() {
   return (
     <div
       className={styles.wrapper}
-      style={{ mixBlendMode: blendModes[blendMode] }}
+      style={{
+        mixBlendMode: blendModes[blendMode],
+      }}
     >
-      <div className={styles.motto}>
-        Your campaign doesn&apos;t stop.
-        <br />
-        <span style={{ color: 'var(--red)' }}>
-          Neither do we.
-        </span>
+      <div className={styles.textWrapper}>
+        {
+          springs.map((props, idx) => (
+            <animated.span
+              key={uuidv4()}
+              style={{ ...props, color: motto[idx].color }}
+            >
+              {motto[idx].text}
+            </animated.span>
+          ))
+        }
       </div>
     </div>
   );
