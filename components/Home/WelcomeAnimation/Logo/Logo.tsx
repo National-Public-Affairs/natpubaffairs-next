@@ -1,3 +1,4 @@
+import React from 'react';
 import Part from './Part';
 import Letter from './Letter';
 import styles from './Logo.module.css';
@@ -74,7 +75,7 @@ function Logo({
         fillColor="#1e3c54"
         setDisplayBg={null}
       />
-      
+
       <Part
         partNum={3}
         strokeRef={logoRefThreeStroke}
