@@ -10,9 +10,17 @@
   display: grid;
   grid-template: 100% / 100%;
   text-align: left;
-  font-size: 10vw;
+  font-size: 9vmax;
   font-weight: 900;
-  line-height: 10vw;
+  line-height: 9vmax;
+}
+
+.textWrapper {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+  width: 60%;
 }
 
 .motto {
