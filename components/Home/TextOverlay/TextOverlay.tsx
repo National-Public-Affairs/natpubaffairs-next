@@ -11,15 +11,15 @@ type Props = {
 export default function TextOverlay({ animationTrigger }: Props) {
   const blendModes = [
     'hard-light',
-    'multiply',
-    'normal',
-    'screen',
+    // 'multiply',
+    // 'normal',
+    // 'screen',
     'darken',
   ];
 
   // this will trigger the animation in-sync with the blend mode interval
   const springs = useTrail(7, {
-    opacity: animationTrigger ? 1 : 0,
+    opacity: true ? 1 : 0,
   });
 
   // this cycles through the blend modes at every each set interval
@@ -33,7 +33,7 @@ export default function TextOverlay({ animationTrigger }: Props) {
       }
     }
 
-    const interval = setInterval(incrementBlendMode, 5000);
+    const interval = setInterval(incrementBlendMode, 4000);
 
     return () => clearInterval(interval);
   });
@@ -42,7 +42,8 @@ export default function TextOverlay({ animationTrigger }: Props) {
     <div
       className={styles.wrapper}
       style={{
-        mixBlendMode: blendModes[blendMode],
+        // mixBlendMode: blendModes[blendMode],
+        mixBlendMode: 'hard-light',
       }}
     >
       <div className={styles.textWrapper}>
