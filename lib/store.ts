@@ -1,11 +1,18 @@
 import { create } from 'zustand';
+import { devtools } from 'zustand/middleware';
 
 interface AppState {
   mottoTrigger: boolean;
   reverse: () => void;
 }
 
-const useAppStore = create<AppState>()((set) => ({
+interface Actions {
+  reverse: () => void;
+}
+
+const useStore = create<AppState & Actions>()(devtools((set) => ({
   mottoTrigger: false,
   reverse: () => set((state) => ({ mottoTrigger: !state.mottoTrigger })),
-}));
+})));
+
+export default useStore;
