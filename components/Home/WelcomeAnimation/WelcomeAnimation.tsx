@@ -165,7 +165,7 @@ export default function WelcomeAnimation() {
       height: '15vh',
       backgroundColor: 'rgba(255, 255, 255, 0)',
     },
-    onRest: () => reverse(),
+    onResolve: () => reverse(),
   });
 
   return (
