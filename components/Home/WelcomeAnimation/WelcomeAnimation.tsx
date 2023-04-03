@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import useStore from '@/lib/store';
 import {
   useSpringRef,
   useChain,
@@ -11,6 +12,8 @@ import Logo from './Logo/Logo';
 import welcomeStyles from './Welcome.module.css';
 
 export default function WelcomeAnimation() {
+  const reverse = useStore((state) => state.reverse);
+
   const [strokeColor, setStrokeColor] = useState<string>('white');
   const [displayBg, setDisplayBg] = useState<boolean>(true);
   // refs for differen animation springs
@@ -162,6 +165,7 @@ export default function WelcomeAnimation() {
       height: '15vh',
       backgroundColor: 'rgba(255, 255, 255, 0)',
     },
+    onRest: () => reverse(),
   });
 
   return (
