@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { animated, useTrail } from '@react-spring/web';
+import useStore from '@/lib/store';
 import { motto } from './textData';
 import styles from './TextOverlay.module.css';
 
-type Props = {
-  animationTrigger: boolean;
-}
-
-export default function TextOverlay({ animationTrigger }: Props) {
+export default function TextOverlay() {
   const blendModes = [
     'hard-light',
     // 'multiply',
@@ -17,9 +14,12 @@ export default function TextOverlay({ animationTrigger }: Props) {
     'darken',
   ];
 
+  // gettting animation trigger state from global store
+  const mottoTrigger = useStore((state) => state.mottoTrigger);
+
   // this will trigger the animation in-sync with the blend mode interval
   const springs = useTrail(7, {
-    opacity: true ? 1 : 0,
+    opacity: mottoTrigger ? 1 : 0,
   });
 
   // this cycles through the blend modes at every each set interval
