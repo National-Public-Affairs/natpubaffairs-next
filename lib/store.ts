@@ -12,7 +12,7 @@ interface Actions {
 
 const useStore = create<AppState & Actions>()(devtools((set) => ({
   mottoTrigger: false,
-  reverse: () => set((state) => ({ mottoTrigger: !state.mottoTrigger })),
+  reverse: () => set((state) => ({ mottoTrigger: true })),
 })));
 
 export default useStore;
