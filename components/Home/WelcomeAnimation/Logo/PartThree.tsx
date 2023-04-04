@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { animated, config, useSpring } from '@react-spring/web';
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
   fillColor: string,
 }
 
-export default function PartThree({ toggle, data, fillColor}: Props) {
+export default function PartThree({ toggle, data, fillColor }: Props) {
   const [length, setLength] = useState<number>(0);
 
   const strokeStyle = useSpring({
