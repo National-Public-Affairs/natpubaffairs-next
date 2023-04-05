@@ -2,10 +2,13 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { animated, useTrail } from '@react-spring/web';
 import useStore from '@/lib/store';
+import useWindowSize from '@/hooks/useWindowDimensions';
 import { motto } from './textData';
 import styles from './TextOverlay.module.css';
 
 export default function TextOverlay() {
+  const { width, height } = useWindowSize();
+
   // gettting animation trigger state from global store
   const mottoTrigger = useStore((state) => state.mottoTrigger);
 
