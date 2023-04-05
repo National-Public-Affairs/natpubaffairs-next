@@ -6,8 +6,10 @@ export default function WelcomeReel() {
       style={{
         position: 'relative',
         overflow: 'hidden',
-        width: '100%',
-        height: '100%',
+        gridColumn: 1,
+        gridRow: 1,
+        justifySelf: 'stretch',
+        alignSelf: 'stretch',
         padding: 0,
       }}
     >
