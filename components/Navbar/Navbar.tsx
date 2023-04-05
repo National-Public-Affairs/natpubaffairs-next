@@ -7,7 +7,7 @@ export default function Navbar() {
     <>
       <WelcomeAnimation />
       <div className={styles.wrapper}>
-      
+
       </div>
     </>
   );
