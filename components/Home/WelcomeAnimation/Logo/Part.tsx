@@ -10,7 +10,6 @@ type Props = {
   data: string,
   strokeColor: 'white' | 'other',
   setStrokeColor: Function | null,
-  fillColor: string,
   setDisplayBg: Function | null,
 }
 
@@ -22,7 +21,6 @@ export default function Part({
   data,
   strokeColor,
   setStrokeColor,
-  fillColor,
   setDisplayBg,
 }: Props) {
   const [length, setLength] = useState<number>(0);
