@@ -1,16 +1,13 @@
 import React from 'react';
-import useWindowSize from '@/hooks/useWindowDimensions';
 
 export default function WelcomeReel() {
-  const { width, height } = useWindowSize();
-
   return (
     <div
       style={{
         position: 'relative',
         overflow: 'hidden',
-        width: `${width}px`,
-        height: `${height}px`,
+        width: '100%',
+        height: '100%',
         padding: 0,
       }}
     >
