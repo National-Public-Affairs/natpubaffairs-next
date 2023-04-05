@@ -1,4 +1,6 @@
-import { useState } from 'react';
+/* eslint-disable indent */
+/* eslint-disable no-nested-ternary */
+import React, { useState } from 'react';
 import { animated, config, useSpring } from '@react-spring/web';
 import type { SpringRef } from '@react-spring/web';
 
