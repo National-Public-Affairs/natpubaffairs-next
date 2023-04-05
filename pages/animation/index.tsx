@@ -22,10 +22,10 @@ export default function Animation() {
           left: '-50%',
           width: '200%',
           height: '200%',
-          backgroundColor: 'var(--blue-sec-3)',
+          background: 'radial-gradient(circle, rgba(193,208,220,1) 0%, rgba(164,187,205,1) 100%)',
         }}
       />
-      <div
+      {/* <div
         style={{
           position: 'absolute',
           zIndex: 1,
@@ -48,7 +48,7 @@ export default function Animation() {
           backgroundColor: 'rgba(193, 208, 220, 0.5)',
           border: '1px solid #acc0d0',
         }}
-      />
+      /> */}
     </div>
   );
 }
