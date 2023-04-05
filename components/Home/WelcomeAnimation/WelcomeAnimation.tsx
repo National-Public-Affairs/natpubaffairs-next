@@ -161,8 +161,8 @@ export default function WelcomeAnimation() {
       backgroundColor: 'rgba(255, 255, 255, 1)',
     },
     to: {
-      width: 'clamp(125px, 15vw, 225px)',
-      height: 'clamp(125px, 15vw, 225px)',
+      width: '15vw',
+      height: '15vh',
       backgroundColor: 'rgba(255, 255, 255, 0)',
     },
     onResolve: () => reverse(),
