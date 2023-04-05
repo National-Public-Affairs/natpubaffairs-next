@@ -15,6 +15,7 @@ export default function WelcomeReel() {
         autoPlay
         muted
         loop
+        playsInline
         style={{
           width: '177.77777778vh',
           minWidth: '100%',
