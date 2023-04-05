@@ -6,13 +6,10 @@
   right: 0;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.75);
-  mix-blend-mode: luminosity;
   display: grid;
   grid-template: 100% / 100%;
   text-align: left;
-  font-size: 12vmax;
   font-weight: 900;
-  line-height: 9vmax;
 }
 
 .textWrapper {
@@ -21,17 +18,15 @@
   justify-self: center;
   align-self: center;
   max-height: 100vh;
+  font-size: clamp(50px, 20vmin, 250px);
+  line-height: clamp(35px, 16vmin, 190px);
   overflow: hidden;
 }
 
-.motto {
-  justify-self: end;
-  align-self: center;
-  width: 75%;
-  padding-right: 20%;
-  font-size: 13vmin;
-  font-weight: 900;
-  line-height: 8vmin;
-  mix-blend-mode: normal;
-  color: var(--blue);
+/* general mobile */
+@media only screen and (max-width: 1900px) and (min-height: 300px) {
+  .textWrapper {
+    font-size: 13vmin;
+    line-height: 10vmin;
+  }
 }

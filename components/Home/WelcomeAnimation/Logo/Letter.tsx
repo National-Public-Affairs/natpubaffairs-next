@@ -5,14 +5,12 @@ import { animated, config, useSpring } from '@react-spring/web';
 type Props = {
   strokeRef: SpringRef,
   data: string,
-  strokeColor: 'white' | 'other',
   fillColor: string,
 }
 
 export default function Letter({
   strokeRef,
   data,
-  strokeColor,
   fillColor,
 }: Props) {
   const [length, setLength] = useState<number>(0);

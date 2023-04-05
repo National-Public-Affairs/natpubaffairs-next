@@ -6,9 +6,7 @@ export default function Navbar() {
   return (
     <>
       <WelcomeAnimation />
-      <div className={styles.wrapper}>
-
-      </div>
+      <div className={styles.wrapper} />
     </>
   );
 }

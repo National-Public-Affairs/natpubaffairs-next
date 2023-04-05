@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { animated, config, useSpring } from '@react-spring/web';
 
 type Props = {

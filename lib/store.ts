@@ -12,6 +12,7 @@ interface Actions {
 
 const useStore = create<AppState & Actions>()(devtools((set) => ({
   mottoTrigger: false,
+  // eslint-disable-next-line no-unused-vars
   reverse: () => set((state) => ({ mottoTrigger: true })),
 })));
 

@@ -8,8 +8,7 @@ import styles from './TextOverlay.module.css';
 
 export default function TextOverlay() {
   const { width, height } = useWindowSize();
-  console.log('width', width);
-  console.log('height', height);
+  const dimensionsFlag = Boolean(width && height && width >= height);
 
   // gettting animation trigger state from global store
   const mottoTrigger = useStore((state) => state.mottoTrigger);
@@ -27,7 +26,7 @@ export default function TextOverlay() {
       <div
         className={styles.textWrapper}
         style={{
-          width: width > 0 && height > 0 ? (width > height ? '60%' : '85%') : '0',
+          width: dimensionsFlag ? '60%' : '85%',
         }}
       >
         {
@@ -39,7 +38,7 @@ export default function TextOverlay() {
               >
                 {motto[idx].text}
               </animated.span>
-              <br />
+              <br key={uuidv4()} />
             </>
           ))
         }
