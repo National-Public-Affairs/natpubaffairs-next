@@ -5,6 +5,5 @@ export const motto = [
   { text: 'doesn\'t ', color: '#1E3C54' },
   { text: 'stop. ', color: '#1E3C54' },
   { text: 'Neither ', color: '#D13F3F' },
-  { text: 'do ', color: '#D13F3F' },
-  { text: 'we. ', color: '#D13F3F' },
+  { text: 'do we. ', color: '#D13F3F' },
 ];
