@@ -21,6 +21,8 @@
   justify-self: center;
   align-self: center;
   width: 60%;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 .motto {
