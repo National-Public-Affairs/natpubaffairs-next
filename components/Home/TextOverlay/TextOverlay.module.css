@@ -20,7 +20,6 @@
   grid-row: 1;
   justify-self: center;
   align-self: center;
-  width: 60%;
   max-height: 100vh;
   overflow: hidden;
 }
@@ -30,9 +29,9 @@
   align-self: center;
   width: 75%;
   padding-right: 20%;
-  font-size: 13vw;
+  font-size: 13vmin;
   font-weight: 900;
-  line-height: 8vw;
+  line-height: 8vmin;
   mix-blend-mode: normal;
   color: var(--blue);
 }
