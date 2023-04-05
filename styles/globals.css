@@ -7,9 +7,11 @@
   /* color palette */
   --blue: rgb(30, 59, 82); /* #1E3C54 */
   --blue-sec-1: rgb(51, 80, 105); /* #325068 */
-  --blue-sec-2: rgb(50, 80, 104); /* #325068 */
+  --blue-sec-2: rgb(193, 208, 220); /* #c1d0dc */
   --blue-sec-3: rgb(213, 224, 233); /* #d5e0e9 */
   --red: rgb(209, 63, 63); /* #D13F3F */
+
+  --gradient-1: linear-gradient(0%);
 }
 
 * {
